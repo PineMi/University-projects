@@ -10,14 +10,25 @@ bool isPrime(int m){
 	return true;
 }
 
+void allPrimes(int start, int end){
+	for (int i=start; i<end; i++){
+		if (isPrime(i)){
+			printf("%d ", i);
+		}
+	}
+}
 
 void main(){
 	bool thatsTrue = true;
-	int num;
+	int startn;
+	int endn;
 	while (thatsTrue){
-		printf("Insert a num: ");
-		scanf("%d", &num);
-		printf("%s\n\n", isPrime(num) ? "true" : "false");
+		printf("\nStart: ");
+		scanf("%d", &startn);
+		
+		printf("End: ");
+		scanf("%d", &endn);
+		allPrimes(startn, endn);
 	}
 }
 
